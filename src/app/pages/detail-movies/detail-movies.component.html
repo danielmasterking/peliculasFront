@@ -1,1 +1,14 @@
-<p>detail-movies works!</p>
+<div class="container">
+    
+    <div class="col-md-6">
+        <div class="card" >
+            <img src="https://image.tmdb.org/t/p/w500{{movie[2].poster_path}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{movie[2].name}}</h5>
+            <p class="card-text">{{movie[10]}}</p>
+            <a  [routerLink]="['/']" class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </div>
+    
+</div>

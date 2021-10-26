@@ -23,4 +23,9 @@ export class MoviesService {
     let url:string = `${environment.ApiUrl}/top_rated`
     return this.http.get(url);
   }
+
+  getDetail(id:number) {
+    let url:string = `${environment.ApiUrl}/detail/${id}`
+    return this.http.get(url);
+  }
 }
