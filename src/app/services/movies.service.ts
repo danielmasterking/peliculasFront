@@ -28,4 +28,9 @@ export class MoviesService {
     let url:string = `${environment.ApiUrl}/detail/${id}`
     return this.http.get(url);
   }
+
+  getSearch(search:string) {
+    let url:string = `${environment.ApiUrl}/search/${search}`
+    return this.http.get(url);
+  }
 }

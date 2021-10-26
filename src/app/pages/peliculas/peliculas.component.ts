@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class PeliculasComponent implements OnInit {
   movies;
   title:string ='Latest Movies'
+  search:string;
   constructor( 
     private router:Router,
     private moviesService:MoviesService
@@ -62,6 +63,23 @@ export class PeliculasComponent implements OnInit {
       this.movies = ArrayMovies[1];
       console.log(ArrayMovies)
       this.title ='More Rated Movies'
+      /*this.movies.forEach(function(element) {
+        console.log(element.poster_path);
+      });*/
+    }, e => {
+        
+      console.log(`The error: `, e);
+      
+    });
+  }
+
+  getSearch(){
+    console.log(this.search)
+    this.moviesService.getSearch(this.search).subscribe((response) => {
+      let ArrayMovies = this.transformArray(response)
+      this.movies = ArrayMovies[1];
+      console.log(ArrayMovies)
+      this.title ='Search Movies'
       /*this.movies.forEach(function(element) {
         console.log(element.poster_path);
       });*/
