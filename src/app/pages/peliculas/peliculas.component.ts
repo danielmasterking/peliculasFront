@@ -79,7 +79,7 @@ export class PeliculasComponent implements OnInit {
       let ArrayMovies = this.transformArray(response)
       this.movies = ArrayMovies[1];
       console.log(ArrayMovies)
-      this.title ='Search Movies'
+      this.title ='Search Movies :' + this.search;
       /*this.movies.forEach(function(element) {
         console.log(element.poster_path);
       });*/
